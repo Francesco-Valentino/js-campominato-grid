@@ -4,9 +4,10 @@ function createCellElement(tagName, className){
     return cellElement;
 }
 
-function createNumberElement(tagName, className){
+function createNumberElement(tagName, className, number){
     const numberElement = document.createElement(tagName);
     numberElement.className = className;
+    document.getElementsByClassName(className).innerHTML += number + 1;
     return numberElement;
 }
 
@@ -15,7 +16,7 @@ const gridElement = document.getElementById("myGrid");
 for (let i = 0; i < 100; i++){
     const setCell = createCellElement("div", "cell");
 
-    const setCellNumber = createNumberElement("h2", "cellNumber")
+    const setCellNumber = createNumberElement("h2", "cellNumber", i)
 
     setCell.addEventListener("click", function(){
         setCell.classList.toggle("selected");
@@ -28,10 +29,6 @@ for (let i = 0; i < 100; i++){
     console.log(i+1);
 
     console.log(document.getElementsByClassName("cellNumber"));
-
-    document.getElementsByClassName("cellNumber").innerHTML += i + 1;
-
-    setCell.appendChild(setCellNumber);
 }
 
 const playGameButton = document.getElementById("playButton");
