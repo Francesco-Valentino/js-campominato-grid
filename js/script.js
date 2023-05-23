@@ -7,7 +7,7 @@ function createCellElement(tagName, className){
 function createNumberElement(tagName, className, number){
     const numberElement = document.createElement(tagName);
     numberElement.className = className;
-    numberElement.getElementsByClassName(className).innerHTML = number + 1;
+    numberElement.innerHTML = number + 1;
     return numberElement;
 }
 
@@ -25,6 +25,8 @@ for (let i = 0; i < 100; i++){
     })
 
     gridElement.appendChild(setCell);
+
+    setCell.appendChild(setCellNumber);
 
     console.log(i+1);
 
