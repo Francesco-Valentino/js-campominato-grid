@@ -7,7 +7,7 @@ function createCellElement(tagName, className){
 function createNumberElement(tagName, className, number){
     const numberElement = document.createElement(tagName);
     numberElement.className = className;
-    document.getElementsByClassName(className).innerHTML += number + 1;
+    numberElement.getElementsByClassName(className).innerHTML = number + 1;
     return numberElement;
 }
 
@@ -16,7 +16,7 @@ const gridElement = document.getElementById("myGrid");
 for (let i = 0; i < 100; i++){
     const setCell = createCellElement("div", "cell");
 
-    const setCellNumber = createNumberElement("h2", "cellNumber", i)
+    const setCellNumber = createNumberElement("h2", "cellNumber", i);
 
     setCell.addEventListener("click", function(){
         setCell.classList.toggle("selected");
