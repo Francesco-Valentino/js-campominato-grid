@@ -43,6 +43,32 @@ button{
 main{
     background-color: #7FFFD4;
     height: 590px;
+    padding-top: 3rem;
+}
+
+div.grid{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 3px black solid;
+    flex-wrap: wrap;
+}
+
+div.cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 3px black solid;
+    display: flex;
+}
+
+.cellNumber{
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected{
+    background-color: #0063a0;
 }
 
 footer{
