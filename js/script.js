@@ -25,8 +25,17 @@ for (let i = 0; i < 100; i++){
 
     gridElement.appendChild(setCell);
 
-    document.getElementsByClassName("cellNumber").innerHTML = i + 1;
+    console.log(i+1);
 
-    setCell.appendChild(setCellNumber)
+    console.log(document.getElementsByClassName("cellNumber"));
+
+    document.getElementsByClassName("cellNumber").innerHTML += i + 1;
+
+    setCell.appendChild(setCellNumber);
 }
 
+const playGameButton = document.getElementById("playButton");
+
+//playGameButton.addEventListener("click", function(){
+    //setCell.classList.remove("selected")
+//})
