@@ -50,21 +50,21 @@ div.grid{
     width: 400px;
     height: 400px;
     margin: auto;
-    border: 3px black solid;
+    border: 2px black solid;
     flex-wrap: wrap;
 }
 
 div.cell{
     width: calc(100% / 10);
     height: calc(100% / 10);
-    border: 3px black solid;
+    border: 2px black solid;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cellNumber{
-    font-size: 1.1rem;
-    justify-content: center;
-    align-items: center;
+    font-size: .8rem;
 }
 
 .selected{
